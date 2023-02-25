@@ -28,13 +28,13 @@ function App() {
           </div>
 
           <div className="mt-10 flex gap-4 items-center justify-center ">
-            <NavLink to="codes">
+            <NavLink to="/nslides/codes">
               {" "}
               <button className="btn--style2 uppercase outline-colorSecondary bg-colorSecondary text-white  duration-150 hover:brightness-90  ">
                 See codes
               </button>
             </NavLink>
-            <NavLink to="about">
+            <NavLink to="/nslides/about">
               {" "}
               <button className="btn--style2 uppercase border-white bg-white duration-150 text-colorPrimary  hover:brightness-90">
                 About
