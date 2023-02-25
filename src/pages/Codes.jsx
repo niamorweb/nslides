@@ -18,40 +18,6 @@ export default function Codes() {
       <section>
         <div className="py-20 px-5 max-w-[1300px] w-full mx-auto flex gap-14">
           <div className="flex  w-full gap-6">
-            {/* <div className="flex flex-col gap-4 items-center mx-auto ">
-              <button
-                onClick={() => setFilterAutoplay(!filterAutoplay)}
-                className={`btn--style4 duration-150 border-colorSecondary text-colorSecondary hover:brightness-90 w-full ${
-                  filterAutoplay ? "btn--selected" : ""
-                }`}
-              >
-                AutoPlay
-              </button>
-              <button
-                onClick={() => setFilterButtons(!filterButtons)}
-                className={`btn--style4 duration-150 border-colorSecondary text-colorSecondary hover:brightness-90 w-full ${
-                  filterButtons ? "btn--selected" : ""
-                }`}
-              >
-                Buttons next/prev
-              </button>
-              <button
-                onClick={() => setFilterNav(!filterNav)}
-                className={`btn--style4 duration-150 border-colorSecondary text-colorSecondary hover:brightness-90 w-full ${
-                  filterNav ? "btn--selected" : ""
-                }`}
-              >
-                Nav slide
-              </button>
-              <button
-                onClick={() => setFilterDragMouse(!filterDragMouse)}
-                className={`btn--style4 duration-150 border-colorSecondary text-colorSecondary hover:brightness-90 w-full ${
-                  filterDragMouse ? "btn--selected" : ""
-                }`}
-              >
-                DragMouse
-              </button>
-            </div> */}
             <div className="flex flex-col w-full gap-20 flex-wrap justify-center">
               {dataCodes.map((x) => {
                 return (
