@@ -6,7 +6,7 @@ function DynamicComponent(props) {
   useEffect(() => {
     async function fetchComponent() {
       const { default: DynamicComponent } = await import(
-        `nslides/src/data/sliderLibrary/${props.name}`
+        `/nslides/src/data/sliderLibrary/${props.name}`
       );
       setComponent(<DynamicComponent {...props} />);
     }
