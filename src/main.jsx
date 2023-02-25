@@ -11,9 +11,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/nslider/" element={<App />} />
-        <Route path="/nslider/codes" element={<Codes />} />
-        <Route path="/nslider/about" element={<About />} />
+        <Route path="/nslides/" element={<App />} />
+        <Route path="/nslides/codes" element={<Codes />} />
+        <Route path="/nslides/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
