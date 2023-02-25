@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CodeBlock from "../components/CodeBlock";
 import Header from "../components/Header";
 import SupportSection from "../components/SupportSection";
-import codesData from "../data/dataCodes.json";
+import codesData from "/nslides/src/data/dataCodes.json";
 
 export default function Codes() {
   const bgColor = "#3056D3";
