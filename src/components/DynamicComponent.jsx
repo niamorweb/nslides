@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-function DynamicComponent(name) {
-  console.log("props = ", name);
-  console.log(name.name);
+function DynamicComponent(props) {
+  console.log("props = ", props);
+  console.log(props.name);
   const [component, setComponent] = useState(null);
 
   useEffect(() => {
     async function fetchComponent() {
       const { default: DynamicComponent } = await import(
-        `../data/sliderLibrary/${name}`
+        `../data/sliderLibrary/${props.name}`
       );
-      setComponent(<DynamicComponent {...name} />);
+      setComponent(<DynamicComponent {...props} />);
     }
 
     fetchComponent();
