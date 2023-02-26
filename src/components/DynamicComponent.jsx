@@ -6,7 +6,7 @@ export default function DynamicComponent(props) {
   useEffect(() => {
     async function fetchComponent() {
       const { default: DynamicComponent } = await import(
-        `../data/sliderLibrary/${props.name}`
+        `../data/sliderLibrary/${props.name}.jsx`
       );
       setComponent(<DynamicComponent {...props} />);
     }
