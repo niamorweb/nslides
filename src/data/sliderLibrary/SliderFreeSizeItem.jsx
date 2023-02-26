@@ -1,66 +1,66 @@
 import React, { useEffect } from "react";
 
 export default function SliderFreeSizeItem() {
-  // function createSlider(nextButton, prevButton, sliderSelector) {
-  //   let btnNext = $(nextButton);
-  //   let btnPrev = $(prevButton);
-  //   let slider = $(sliderSelector);
-  //   let currentPositionScroll = slider.scrollLeft();
-  //   let totalWidth = slider[0].scrollWidth;
-  //   let visibleWidth = slider.outerWidth();
+  function createSlider(nextButton, prevButton, sliderSelector) {
+    let btnNext = $(nextButton);
+    let btnPrev = $(prevButton);
+    let slider = $(sliderSelector);
+    let currentPositionScroll = slider.scrollLeft();
+    let totalWidth = slider[0].scrollWidth;
+    let visibleWidth = slider.outerWidth();
 
-  //   function checkDisabled() {
-  //     if (currentPositionScroll + visibleWidth >= totalWidth) {
-  //       btnNext.addClass("nslide_free__button--disabled");
-  //     } else {
-  //       btnNext.removeClass("nslide_free__button--disabled");
-  //     }
-  //     if (currentPositionScroll <= 0) {
-  //       btnPrev.addClass("nslide_free__button--disabled");
-  //     } else {
-  //       btnPrev.removeClass("nslide_free__button--disabled");
-  //     }
-  //   }
-  //   checkDisabled();
+    function checkDisabled() {
+      if (currentPositionScroll + visibleWidth >= totalWidth) {
+        btnNext.addClass("nslide_free__button--disabled");
+      } else {
+        btnNext.removeClass("nslide_free__button--disabled");
+      }
+      if (currentPositionScroll <= 0) {
+        btnPrev.addClass("nslide_free__button--disabled");
+      } else {
+        btnPrev.removeClass("nslide_free__button--disabled");
+      }
+    }
+    checkDisabled();
 
-  //   btnNext.on("click", function () {
-  //     if (currentPositionScroll + visibleWidth >= totalWidth) {
-  //       return;
-  //     } else {
-  //       currentPositionScroll = currentPositionScroll + slider.width() * 0.4;
-  //       slider.scrollLeft(currentPositionScroll);
+    btnNext.on("click", function () {
+      if (currentPositionScroll + visibleWidth >= totalWidth) {
+        return;
+      } else {
+        currentPositionScroll = currentPositionScroll + slider.width() * 0.4;
+        slider.scrollLeft(currentPositionScroll);
 
-  //       if (currentPositionScroll + visibleWidth >= totalWidth) {
-  //         currentPositionScroll = totalWidth - visibleWidth;
-  //       }
-  //     }
-  //     checkDisabled();
-  //   });
+        if (currentPositionScroll + visibleWidth >= totalWidth) {
+          currentPositionScroll = totalWidth - visibleWidth;
+        }
+      }
+      checkDisabled();
+    });
 
-  //   btnPrev.on("click", function () {
-  //     if (currentPositionScroll <= 0) {
-  //       return;
-  //     } else {
-  //       currentPositionScroll = currentPositionScroll + slider.width() * -0.4;
-  //       slider.scrollLeft(currentPositionScroll);
+    btnPrev.on("click", function () {
+      if (currentPositionScroll <= 0) {
+        return;
+      } else {
+        currentPositionScroll = currentPositionScroll + slider.width() * -0.4;
+        slider.scrollLeft(currentPositionScroll);
 
-  //       if (currentPositionScroll < 0) {
-  //         currentPositionScroll = 0;
-  //       }
-  //     }
-  //     checkDisabled();
-  //   });
-  // }
+        if (currentPositionScroll < 0) {
+          currentPositionScroll = 0;
+        }
+      }
+      checkDisabled();
+    });
+  }
 
-  // useEffect(() => {
-  //   $(".nslide_free").each(function () {
-  //     createSlider(
-  //       $(this).find(".nslide_free__button--next"),
-  //       $(this).find(".nslide_free__button--prev"),
-  //       $(this).find(".nslide_free__slider")
-  //     );
-  //   });
-  // });
+  useEffect(() => {
+    $(".nslide_free").each(function () {
+      createSlider(
+        $(this).find(".nslide_free__button--next"),
+        $(this).find(".nslide_free__button--prev"),
+        $(this).find(".nslide_free__slider")
+      );
+    });
+  });
 
   return (
     <div className="main_container flex flex-col gap-10">
