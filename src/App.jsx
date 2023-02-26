@@ -6,12 +6,12 @@ function App() {
     <div className="home min-h-screen relative overflow-hidden bg-colorPrimary ">
       <img
         className="absolute lg:scale-125 -bottom-6 right-12 lg:right-48"
-        src="/src/assets/dotted-shape.svg"
+        src="/nslides/src/assets/dotted-shape.svg"
         alt=""
       />
       <img
         className="absolute lg:scale-125  bottom-[20%] -left-4 lg:left-48"
-        src="/src/assets/dotted-shape.svg"
+        src="/nslides/src/assets/dotted-shape.svg"
         alt=""
       />
       <Header />

@@ -56,7 +56,6 @@ export default function CodeBlock({
       <div className="border-2 shadow-md  p-4 rounded-sm  ">
         <div className="relative w-full flex flex-col gap-5 items-center">
           <DynamicComponent name={visualization} />
-          {/* <div className="overlay_view_code flex justify-center items-center absolute w-full h-full top-0 bg-black bg-opacity-0 hover:bg-opacity-20 duration-150"> */}
           <div className="flex justify-between w-full items-start lg:items-start flex-col lg:flex-row gap-6">
             <div className="flex flex-col gap-2 mt-3 mb-1 self-baseline pl-2">
               <span className="font-semibold text-xl ">Slider {id}</span>

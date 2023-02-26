@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 function DynamicComponent(props) {
+  console.log("props = ", props);
   const [component, setComponent] = useState(null);
 
   useEffect(() => {
