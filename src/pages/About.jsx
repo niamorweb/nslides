@@ -63,8 +63,8 @@ export default function About() {
               </span>
               {faq3 ? (
                 <span className="px-3 mb-7">
-                  I am a web developer front end of 20 years old, you can find
-                  me on my social nertwork below
+                  I am a french web developer front end of 20 years old, you can
+                  find me on my links below
                 </span>
               ) : (
                 ""
