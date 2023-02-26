@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function DynamicComponent(props) {
-  console.log("props = ", props);
-  console.log(props.name);
+export default function DynamicComponent(props) {
   const [component, setComponent] = useState(null);
 
   useEffect(() => {
@@ -18,5 +16,3 @@ function DynamicComponent(props) {
 
   return <div className="w-full">{component}</div>;
 }
-
-export default DynamicComponent;
