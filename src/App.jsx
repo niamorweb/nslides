@@ -1,48 +1,42 @@
 import { NavLink } from "react-router-dom";
 import Header from "./components/Header";
+import { useEffect, useState } from "react";
+import codesData from "./data/dataCodes.json";
+import SupportSection from "./components/SupportSection";
+import CodeBlock from "./components/CodeBlock";
 
 function App() {
-  return (
-    <div className="home min-h-screen relative overflow-hidden bg-colorPrimary ">
-      <img
-        className="absolute lg:scale-125 -bottom-6 right-12 lg:right-48"
-        src="/nslides/src/assets/dotted-shape.svg"
-        alt=""
-      />
-      <img
-        className="absolute lg:scale-125  bottom-[20%] -left-4 lg:left-48"
-        src="/nslides/src/assets/dotted-shape.svg"
-        alt=""
-      />
-      <Header />
-      <section className="intro relative mt-[67px] text-white flex justify-center ">
-        <div>
-          <div className=" flex flex-col gap-5 max-w-[50rem] mx-auto text-center">
-            <span className="font-bold  uppercase  text-4xl  leading-[40px] ">
-              You want make simple slides ?
-            </span>
-            <span className="text-base leading-7">
-              You will find here 3 types of slider with their codes and
-              explanations on the javascript codes
-            </span>
-          </div>
+  const bgColor = "#3056D3";
+  const [dataCodes, setDataCodes] = useState([]);
 
-          <div className="mt-10 flex gap-4 items-center justify-center ">
-            <NavLink to="/nslides/codes">
-              {" "}
-              <button className="btn--style2 uppercase outline-colorSecondary bg-colorSecondary text-white  duration-150 hover:brightness-90  ">
-                See codes
-              </button>
-            </NavLink>
-            <NavLink to="/nslides/about">
-              {" "}
-              <button className="btn--style2 uppercase border-white bg-white duration-150 text-colorPrimary  hover:brightness-90">
-                About
-              </button>
-            </NavLink>
+  useEffect(() => {
+    setDataCodes(codesData);
+  }, []);
+  return (
+    <div className="min-h-screen flex-col justify-between flex">
+      <Header bgColor={bgColor} />
+
+      <section>
+        <div className="py-20 px-5 max-w-[1300px] w-full mx-auto flex gap-14">
+          <div className="flex  w-full gap-6">
+            <div className="flex flex-col w-full gap-20 flex-wrap justify-center">
+              {dataCodes.map((x) => {
+                return (
+                  <CodeBlock
+                    visualization={x.visualization}
+                    codeHtml={x.htmlCode}
+                    codeCss={x.cssCode}
+                    codeJs={x.jsCode}
+                    description={x.description}
+                    id={x.id}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
+      <SupportSection />
     </div>
   );
 }

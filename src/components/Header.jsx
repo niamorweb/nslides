@@ -13,11 +13,6 @@ export default function Header({ bgColor }) {
             </NavLink>
           </li>
           <li>
-            <NavLink exact to="/nslides/codes" activeclassname="active">
-              Codes
-            </NavLink>
-          </li>
-          <li>
             <NavLink exact to="/nslides/about" activeclassname="active">
               About
             </NavLink>

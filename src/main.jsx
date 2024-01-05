@@ -12,7 +12,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         <Route path="/nslides/" element={<App />} />
-        <Route path="/nslides/codes" element={<Codes />} />
         <Route path="/nslides/about" element={<About />} />
       </Routes>
     </BrowserRouter>
